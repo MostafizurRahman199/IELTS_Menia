@@ -1,0 +1,67 @@
+color theme #A91D3A #151515
+
+shadow-[#A91D3A]
+
+use tailwind responsive design and in Action have delete button
+
+
+src/
+│
+├── components/               # Reusable UI components
+│   ├── Header/               # Header and Navigation bar
+│   ├── Footer/               # Footer section
+│   ├── CourseCard/           # Card component for courses
+│   ├── DragAndDrop/          # Drag-and-drop UI components
+│   ├── Cart/                 # Cart-related components
+│   └── DashboardItem/        # Components for dashboard items
+│
+├── features/                 # Feature-specific logic
+│   ├── courses/              # "Popular Courses" section
+│   │   ├── CoursesList.js    # Component for listing courses
+│   │   └── coursesSlice.js   # Redux slice or API query hooks for courses
+│   ├── packages/             # Package creation functionality
+│   │   ├── CreatePackage.js  # Package creation page
+│   │   ├── PackageForm.js    # Form for custom packages
+│   │   └── packagesSlice.js  # Redux slice for managing packages
+│   ├── cart/                 # Cart functionality
+│   │   ├── Cart.js           # Cart component
+│   │   ├── CartItem.js       # Component for individual cart items
+│   │   └── cartSlice.js      # Redux slice for cart management
+│   ├── auth/                 # Authentication system
+│   │   ├── Login.js          # Login page
+│   │   ├── Register.js       # Registration page
+│   │   └── authSlice.js      # Redux slice for authentication
+│   └── dashboard/            # Dashboard
+│       ├── Dashboard.js      # Dashboard page
+│       └── dashboardSlice.js # Redux slice for dashboard data
+│
+├── pages/                    # High-level page components
+│   ├── LandingPage.js        # Landing page component
+│   ├── PackageCreationPage.js # Package creation page component
+│   ├── CartPage.js           # Cart page component
+│   ├── DashboardPage.js      # Dashboard page component
+│   ├── LoginPage.js          # Login page
+│   └── RegisterPage.js       # Registration page
+│
+├── hooks/                    # Custom hooks
+│   ├── useAuth.js            # Hook for authentication status
+│   ├── useFetchCourses.js    # Hook for fetching courses using TanStack Query
+│   └── useCart.js            # Hook for cart manipulation
+│
+├── services/                 # API integration and utilities
+│   ├── apiClient.js          # Axios or Fetch configuration
+│   ├── courseApi.js          # API methods for courses
+│   ├── authApi.js            # API methods for authentication
+│   └── packageApi.js         # API methods for packages
+│
+├── store/                    # Redux store configuration
+│   ├── store.js              # Redux store setup
+│   └── rootReducer.js        # Combine all slices here
+│
+├── styles/                   # Global and utility styles
+│   └── globals.css           # Global CSS or Tailwind imports
+│
+├── App.js                    # Main App component
+├── index.js                  # Entry point for the React application
+└── index.html                # HTML template
+
