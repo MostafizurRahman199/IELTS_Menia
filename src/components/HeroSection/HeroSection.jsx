@@ -140,7 +140,7 @@ const HeroSection = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="absolute z-10 -bottom-32 sm:-bottom-36 lg:-bottom-20 left-1/2 transform -translate-x-1/2 w-11/12 sm:w-10/12 lg:w-10/12 mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 bg-white text-blue-600 py-8 px-4 sm:px-6 rounded-2xl shadow-md">
+      <div className="absolute z-10 -bottom-28 sm:-bottom-32 lg:-bottom-20 left-1/2 transform -translate-x-1/2 w-11/12 sm:w-10/12 lg:w-10/12 mx-auto grid grid-cols-3 gap-4 sm:gap-6 bg-white text-blue-600 py-8 px-4 sm:px-6 rounded-2xl shadow-md">
         <div className="text-center space-y-2">
           <h3 className="text-3xl sm:text-5xl font-semibold text-[#253642]">
             60+

@@ -1,44 +1,47 @@
-// src/components/Header/Header.js
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+
+
+
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import logoMaac from "../../../public/logoMaac.png";
-import { ShoppingCart } from './ShoppingCart';
-import { FaAngleDown } from "react-icons/fa6";
-import { FaAngleRight } from "react-icons/fa6";
-
-
-
+import { ShoppingCart } from "./ShoppingCart";
+import { FaAngleDown, FaAngleRight, FaBars, FaTimes } from "react-icons/fa";
 
 const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownOpen((prev) => !prev);
   };
 
+  const toggleMobileNav = () => {
+    setMobileNavOpen((prev) => !prev);
+  };
+
   return (
-    <header className="bg-white shadow-sm p-4 w-10/12 mx-auto">
+    <header className="bg-white shadow-sm p-4 w-10/12 mx-auto relative">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img src={logoMaac} alt="Logo" className="h-10 w-auto" />
         </div>
 
-        <div className="flex items-center gap-4">
-          {/* Navigation Links */}
-          <nav className="hidden md:flex gap-4">
-            <div className='flex items-center gap-1'>
-            <NavLink
-              to="/exam-packages"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-blue-500 font-bold"
-                  : "text-black hover:text-blue-500"
-              }
-            >
-              Exam Packages
-            </NavLink>
-            <FaAngleRight />
+        {/* Desktop Navbar */}
+        <div className="hidden md:flex items-center gap-4">
+          <nav className="flex gap-4">
+            <div className="flex items-center gap-1">
+              <NavLink
+                to="/exam-packages"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-blue-500 font-bold"
+                    : "text-black hover:text-blue-500"
+                }
+              >
+                Exam Packages
+              </NavLink>
+              <FaAngleRight />
             </div>
             <NavLink
               to="/free-test"
@@ -54,7 +57,6 @@ const Header = () => {
 
           {/* Right Icons */}
           <div className="flex items-center space-x-4">
-            {/* Shopping Cart */}
             <div className="px-4 border-r border-l border-gray-300">
               <ShoppingCart />
             </div>
@@ -70,10 +72,10 @@ const Header = () => {
                   alt="User"
                   className="h-8 w-8 rounded-full border"
                 />
-               <div className='flex items-center gap-1'>
-               <span className="text-black">Esther</span>
-                <FaAngleDown />
-               </div>
+                <div className="flex items-center gap-1">
+                  <span className="text-black">Esther</span>
+                  <FaAngleDown />
+                </div>
               </div>
 
               {/* Dropdown Menu */}
@@ -90,7 +92,7 @@ const Header = () => {
                     Dashboard
                   </NavLink>
                   <button
-                    onClick={() => alert('Logout functionality')}
+                    onClick={() => alert("Logout functionality")}
                     className="block w-full text-left px-4 py-2 text-black hover:bg-gray-100 rounded-2xl"
                   >
                     Logout
@@ -99,6 +101,71 @@ const Header = () => {
               )}
             </div>
           </div>
+        </div>
+
+        {/* Mobile Navbar Toggle */}
+        <button
+          className="md:hidden text-black text-xl"
+          onClick={toggleMobileNav}
+        >
+          {mobileNavOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
+
+      {/* Mobile Navbar */}
+      <div
+        className={`fixed top-0 right-0 h-full bg-white z-20 transform ${
+          mobileNavOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300 w-3/4 shadow-lg`}
+      >
+        <div className="p-4">
+          <button
+            className="text-black text-2xl mb-4"
+            onClick={toggleMobileNav}
+          >
+            <FaTimes />
+          </button>
+          <nav className="flex flex-col items-start space-y-4">
+            <NavLink
+              to="/exam-packages"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-blue-500 font-bold"
+                  : "text-black hover:text-blue-500"
+              }
+              onClick={toggleMobileNav}
+            >
+              Exam Packages
+            </NavLink>
+            <NavLink
+              to="/free-test"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-blue-500 font-bold"
+                  : "text-black hover:text-blue-500"
+              }
+              onClick={toggleMobileNav}
+            >
+              Free Test
+            </NavLink>
+            <div className="border-t border-gray-200 w-full my-2"></div>
+            <NavLink
+              to="/dashboard"
+              className="text-black hover:text-blue-500"
+              onClick={toggleMobileNav}
+            >
+              Dashboard
+            </NavLink>
+            <button
+              className="text-black hover:text-blue-500"
+              onClick={() => {
+                alert("Logout functionality");
+                toggleMobileNav();
+              }}
+            >
+              Logout
+            </button>
+          </nav>
         </div>
       </div>
     </header>
