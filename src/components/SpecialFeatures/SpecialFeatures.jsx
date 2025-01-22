@@ -35,12 +35,15 @@ const SpecialFeatures = () => {
   ];
 
   return (
-    <section className="mb-12 mt-44 bg-[#FEFEFF]">
+    <section className="pb-12 pt-44 bg-[#f3f6fc]">
       <div className="w-10/12 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
         {/* Header */}
         <div className="md:col-span-2 bg-[#0052CC] text-white rounded-2xl p-12">
-          <h2 className="text-2xl sm:text-3xl font-semibold">
-            Our special features <br /> for students
+          <h2 className="text-2xl  my-2 sm:text-3xl font-semibold">
+            Our special features   
+          </h2>
+          <h2 className="text-2xl my-2 sm:text-3xl font-semibold">
+            for students
           </h2>
           <button className="mt-4 bg-white text-[#0052CC] px-6 py-3 rounded-xl font-semibold shadow-md">
             See Features

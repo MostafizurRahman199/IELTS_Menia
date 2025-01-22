@@ -7,7 +7,7 @@ const FeatureCard = ({ feature }) => {
   if (!feature) return null;
 
   return (
-    <div className="bg-white shadow-md rounded-2xl p-6 text-start space-y-4 hover:shadow-lg transition-shadow duration-300">
+    <div className="bg-white shadow-md rounded-2xl p-8 text-start space-y-4 hover:shadow-lg transition-shadow duration-300">
       <img src={feature.image} alt={feature.title} className="w-12 h-12" />
       <h3 className="text-lg font-semibold text-[#0052CC]">
         {feature.title}
