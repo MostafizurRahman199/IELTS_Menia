@@ -157,11 +157,13 @@ import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
 
   const navigate = useNavigate();
+  const location = useLocation();
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -180,21 +182,24 @@ const Login = () => {
 
       if (response.status === 200 || response.status === 201) {
         const token = response.data.token;
+        console.log(response.data)
 
         // Save the token to localStorage
-        localStorage.setItem("authToken", token);
+        localStorage.setItem("token", token);
 
         // Success alert
         Swal.fire({
           icon: "success",
           title: "Login Successful!",
           text: "You have successfully logged in.",
-          confirmButtonText: "OK",
-          confirmButtonColor: "#0052CC",
+          showConfirmButton: false,
+          timer: 500,
         }).then(() => {
-          // Redirect to dashboard or protected route
-          navigate("/");
+           const redirectTo = location.state?.from || "/"; 
+          navigate(redirectTo);
         });
+
+
       } else {
         // Error alert
         Swal.fire({

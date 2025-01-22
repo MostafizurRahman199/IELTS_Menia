@@ -2,7 +2,7 @@
 
 
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logoMaac from "../../../public/logoMaac.png";
 import { ShoppingCart } from "./ShoppingCart";
 import { FaAngleDown, FaAngleRight, FaBars, FaTimes } from "react-icons/fa";
@@ -57,9 +57,11 @@ const Header = () => {
 
           {/* Right Icons */}
           <div className="flex items-center space-x-4">
-            <div className="px-4 border-r border-l border-gray-300">
+           
+           
+            <Link to={"/cart-page"} className="px-4 border-r border-l border-gray-300">
               <ShoppingCart />
-            </div>
+            </Link>
 
             {/* User Profile */}
             <div className="relative">

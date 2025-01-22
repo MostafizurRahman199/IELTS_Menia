@@ -16,6 +16,7 @@ import Home from "../pages/Home/Home";
 import LandingPage from "../pages/LandingPage";
 import PackageCreation from "../pages/PackageCreation/PackageCreation";
 import Parent from "../pages/LoginRegister/Parent";
+import CartPage from "../pages/CartPage/CartPage";
 
 
 const router = createBrowserRouter([    
@@ -43,6 +44,17 @@ const router = createBrowserRouter([
                             <title>Job Seeker - Home</title>
                         </Helmet>
                         <PackageCreation></PackageCreation>
+                    </>
+                ),
+            },
+            {
+                path: "/cart-page",
+                element: (
+                    <>
+                        <Helmet>
+                            <title>Job Seeker - Home</title>
+                        </Helmet>
+                        <CartPage></CartPage>
                     </>
                 ),
             },
