@@ -1,6 +1,8 @@
 import React from "react";
 import DraggableItem from "./DraggableItem";
 import DroppableArea from "./DroppableArea";
+import animated from "../../../public/animated.png"
+
 
 const SelectedServices = ({ services, onQuantityChange }) => {
   const totalPrice = services.reduce(
@@ -16,7 +18,7 @@ const SelectedServices = ({ services, onQuantityChange }) => {
           {services.length === 0 ? (
             <div className="text-center">
               <img
-                src="/path/to/animated.png"
+                src={animated}
                 alt="No Services Selected"
                 className="w-1/2 mx-auto"
               />

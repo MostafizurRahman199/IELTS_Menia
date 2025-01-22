@@ -1,6 +1,7 @@
 import React from "react";
 import DraggableItem from "./DraggableItem";
 import DroppableArea from "./DroppableArea";
+import packageCreationCard from "../../../public/packageCreationCard.png";
 
 const ServiceList = ({ services }) => {
   return (
@@ -13,7 +14,7 @@ const ServiceList = ({ services }) => {
       </DroppableArea>
       <div className="mt-6">
         <img
-          src="/path/to/packageCreationCard.png"
+          src={packageCreationCard}
           alt="Package Creation Illustration"
           className="w-full rounded-lg"
         />

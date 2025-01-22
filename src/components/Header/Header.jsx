@@ -32,7 +32,7 @@ const Header = () => {
           <nav className="flex gap-4">
             <div className="flex items-center gap-1">
               <NavLink
-                to="/exam-packages"
+                to="/package-creation"
                 className={({ isActive }) =>
                   isActive
                     ? "text-blue-500 font-bold"
@@ -80,7 +80,7 @@ const Header = () => {
 
               {/* Dropdown Menu */}
               {dropdownOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-2xl shadow-lg">
+                <div className="absolute z-10 right-0 mt-2 w-48 bg-white border border-gray-200 rounded-2xl shadow-lg">
                   <NavLink
                     to="/dashboard"
                     className={({ isActive }) =>
@@ -127,7 +127,7 @@ const Header = () => {
           </button>
           <nav className="flex flex-col items-start space-y-4">
             <NavLink
-              to="/exam-packages"
+              to="/package-creation"
               className={({ isActive }) =>
                 isActive
                   ? "text-blue-500 font-bold"

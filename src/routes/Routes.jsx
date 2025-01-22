@@ -15,6 +15,7 @@ import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home/Home";
 import LandingPage from "../pages/LandingPage";
 import PackageCreation from "../pages/PackageCreation/PackageCreation";
+import Parent from "../pages/LoginRegister/Parent";
 
 
 const router = createBrowserRouter([    
@@ -126,13 +127,13 @@ const router = createBrowserRouter([
            
          
             {
-                path: "/login",
+                path: "/login-register",
                 element: (
                     <>
                         <Helmet>
                             <title>Job Seeker - Login</title>
                         </Helmet>
-                        <Login />
+                        <Parent></Parent>
                     </>
                 ),
             },
