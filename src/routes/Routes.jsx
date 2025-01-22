@@ -14,6 +14,7 @@ import UpdateProfile from "../pages/UpdateProfile";
 import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home/Home";
 import LandingPage from "../pages/LandingPage";
+import PackageCreation from "../pages/PackageCreation/PackageCreation";
 
 
 const router = createBrowserRouter([    
@@ -29,6 +30,18 @@ const router = createBrowserRouter([
                             <title>Job Seeker - Home</title>
                         </Helmet>
                         <LandingPage></LandingPage>
+                    </>
+                ),
+            },
+            
+            {
+                path: "/package-creation",
+                element: (
+                    <>
+                        <Helmet>
+                            <title>Job Seeker - Home</title>
+                        </Helmet>
+                        <PackageCreation></PackageCreation>
                     </>
                 ),
             },

@@ -56,7 +56,7 @@ import { Provider } from "react-redux";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"; // TanStack Query
 
 import Header from "../components/Header/Header";
-import store from "../store/store";
+import {store} from "../store/store";
 
 // Create a QueryClient instance
 const queryClient = new QueryClient();
