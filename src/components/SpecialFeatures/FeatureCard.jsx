@@ -9,7 +9,7 @@ const FeatureCard = ({ feature }) => {
   return (
     <div className="bg-white shadow-md rounded-2xl p-8 text-start space-y-4 hover:shadow-lg transition-shadow duration-300">
       <img src={feature.image} alt={feature.title} className="w-12 h-12" />
-      <h3 className="text-lg font-semibold text-[#0052CC]">
+      <h3 className="text-2xl font-semibold text-[#0052CC]">
         {feature.title}
       </h3>
       <p className="text-sm text-[#516986] whitespace-pre-line">

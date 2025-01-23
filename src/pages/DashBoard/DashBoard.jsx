@@ -6,6 +6,8 @@ import { getPackageDataFromLocalStorage } from "../../utils/localStore";
 import MyPackages from "./MyPackages";
 import MyCourses from "./MyCourses";
 import Result from "./Result";
+import IELTSProgress from "./IELTSProgress";
+import Spinner from "../../components/Spinner/Spinner";
 
 const DashBoard = () => {
   const token = localStorage.getItem("token");
@@ -24,7 +26,7 @@ const DashBoard = () => {
   });
 
   if (isLoading) {
-    return <p>Loading dashboard data...</p>;
+    return <Spinner></Spinner>
   }
 
   if (isError) {
@@ -32,12 +34,13 @@ const DashBoard = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
+    <div className="min-h-screen bg-gray-100 p-2 sm:p-6">
      <div className="w-full md:w-10/12 mx-auto">
-     <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">Dashboard</h1>
+     <h1 className="text-3xl sm:text-4xl font-bold my-4 text-center text-gray-800">Dashboard</h1>
        <MyCourses courses={courses} />
      
         <MyPackages></MyPackages>
+        <IELTSProgress></IELTSProgress>
         <Result></Result>
      </div>
     
