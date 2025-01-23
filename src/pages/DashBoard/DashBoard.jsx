@@ -36,7 +36,7 @@ const DashBoard = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-2 sm:p-6">
      <div className="w-full md:w-10/12 mx-auto">
-     <h1 className="text-3xl sm:text-4xl font-bold my-4 text-center text-gray-800">Dashboard</h1>
+     <h1 className="text-3xl sm:text-4xl font-bold my-4 text-center text-[#0052CC]">Dashboard</h1>
        <MyCourses courses={courses} />
      
         <MyPackages></MyPackages>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const SecondaryFooter = () => {
   return (
-    <div className=" text-gray-100 text-sm py-8  border-t-[0.1px]">
+    <div className=" bg-[#1b2331] text-white text-sm py-8  border-t-[0.1px]">
            
            <div className='w-10/12  mx-auto flex flex-col md:flex-row justify-between items-center gap-4'>
            <div>

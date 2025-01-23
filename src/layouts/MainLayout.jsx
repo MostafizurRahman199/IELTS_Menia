@@ -18,6 +18,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query"; // Tan
 import Header from "../components/Header/Header";
 import {store} from "../store/store";
 import Footer from "../components/Footer/Footer";
+import SecondaryFooter from "../components/Footer/SecondaryFooter";
 
 
 const queryClient = new QueryClient();
@@ -29,10 +30,12 @@ const MainLayout = () => {
   const location = useLocation(); // Get the current route
 
   // List of routes where Header and Footer should NOT appear
-  const noHeaderFooterRoutes = ["/login-register"];
+  const noHeaderFooterRoutes = ["/login-register", ];
+  const noFooterRoutes = ["/login-register", "/package-creation", "/cart-page","/dashboard"]
 
   // Check if current route matches any route in the list
-  const hideHeaderFooter = noHeaderFooterRoutes.includes(location.pathname);
+  const hideHeaderFooter = noHeaderFooterRoutes.includes(location.pathname);   
+  const hideFooter = noFooterRoutes.includes(location.pathname);
 
   return (
     <Provider store={store}>
@@ -50,7 +53,7 @@ const MainLayout = () => {
                 <div className="h-fit">
                   <Outlet />
                 </div>
-                {!hideHeaderFooter && <Footer></Footer>}
+                {hideFooter ? <SecondaryFooter></SecondaryFooter>  : <Footer></Footer>}
               </>
             )}
           </div>

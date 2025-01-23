@@ -105,7 +105,7 @@ const PaymentDetails = ({
   const grandTotal = totalPrice - discount + vat;
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md h-fit">
+    <div className="border-t rounded-none sm:border p-6 sm:rounded-lg  h-fit">
       <div className="space-y-4">
         {/* Price */}
         <div className="flex justify-between">

@@ -8,7 +8,7 @@ const FooterMiddlePart = () => {
       <h3 className="font-bold text-xl md:text-2xl mb-4 text-white">Get in touch</h3>
 
       {/* First Location */}
-      <div className="flex items-start mb-4">
+      <div className="flex items-start mb-2">
         <div className="text-white mr-3">
           <FaMapMarkerAlt className="text-xl" />
         </div>
@@ -21,7 +21,7 @@ const FooterMiddlePart = () => {
       </div>
 
       {/* Second Location */}
-      <div className="flex items-start mb-4">
+      <div className="flex items-start mb-2">
         <div className="text-white mr-3">
           <FaMapMarkerAlt className="text-xl" />
         </div>

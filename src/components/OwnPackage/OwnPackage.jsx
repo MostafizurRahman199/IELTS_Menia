@@ -1,5 +1,6 @@
 import React from "react";
 import rightSideStudyImage from "../../../public/study.png";
+import { Link } from "react-router-dom";
 
 const OwnPackage = () => {
   return (
@@ -15,9 +16,9 @@ const OwnPackage = () => {
           selections from this page and purchase it.
         </p>
 
-        <button className="bg-[#0052CC] text-white px-6 py-3 rounded-xl text-lg hover:bg-blue-700 transition">
+        <Link to={"/package-creation"} className="bg-[#0052CC] text-white px-6 py-3 rounded-xl text-lg hover:bg-blue-700 transition">
           Create Package
-        </button>
+        </Link>
       </div>
 
       {/* Right Section */}

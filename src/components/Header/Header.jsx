@@ -1,15 +1,14 @@
-
-
-
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logoMaac from "../../../public/logoMaac.png";
 import { ShoppingCart } from "./ShoppingCart";
 import { FaAngleDown, FaAngleRight, FaBars, FaTimes } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [token, setToken] = useState("");
 
   const toggleDropdown = () => {
     setDropdownOpen((prev) => !prev);
@@ -18,6 +17,25 @@ const Header = () => {
   const toggleMobileNav = () => {
     setMobileNavOpen((prev) => !prev);
   };
+
+const handleLogout = () => {
+  localStorage.removeItem('token');
+  setToken("");
+  // SweetAlert2 notification for successful logout
+  Swal.fire({
+    title: 'Logged Out',
+    text: 'You have successfully logged out.',
+    icon: 'success',
+    showConfirmButton: false,
+    timer: 500,
+  });
+}
+
+
+useEffect(()=>{
+  const token = localStorage.getItem('token');
+  setToken(token);
+},[token])
 
   return (
     <header className="bg-white shadow-sm p-4 w-10/12 mx-auto relative">
@@ -64,44 +82,52 @@ const Header = () => {
             </Link>
 
             {/* User Profile */}
-            <div className="relative">
-              <div
-                className="flex items-center space-x-2 cursor-pointer"
-                onClick={toggleDropdown}
-              >
-                <img
-                  src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                  alt="User"
-                  className="h-8 w-8 rounded-full border"
-                />
-                <div className="flex items-center gap-1">
-                  <span className="text-black">Esther</span>
-                  <FaAngleDown />
-                </div>
+           {
+            token &&  <div className="relative">
+            <div
+              className="flex items-center space-x-2 cursor-pointer"
+              onClick={toggleDropdown}
+            >
+              <img
+                src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                alt="User"
+                className="h-8 w-8 rounded-full border"
+              />
+              <div className="flex items-center gap-1">
+                <span className="text-black">Esther</span>
+                <FaAngleDown />
               </div>
-
-              {/* Dropdown Menu */}
-              {dropdownOpen && (
-                <div className="absolute z-10 right-0 mt-2 w-48 bg-white border border-gray-200 rounded-2xl shadow-lg">
-                  <NavLink
-                    to="/dashboard"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "block px-4 py-2 text-blue-500 font-bold bg-gray-100"
-                        : "block px-4 py-2 text-black hover:bg-gray-100 rounded-2xl"
-                    }
-                  >
-                    Dashboard
-                  </NavLink>
-                  <button
-                    onClick={() => alert("Logout functionality")}
-                    className="block w-full text-left px-4 py-2 text-black hover:bg-gray-100 rounded-2xl"
-                  >
-                    Logout
-                  </button>
-                </div>
-              )}
             </div>
+
+            {/* Dropdown Menu */}
+            {dropdownOpen && (
+              <div className="absolute z-10 right-0 mt-2 w-48 bg-white border border-gray-200 rounded-2xl shadow-lg">
+                <NavLink
+                  to="/dashboard"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block px-4 py-2 text-blue-500 font-bold bg-gray-100"
+                      : "block px-4 py-2 text-black hover:bg-gray-100 rounded-2xl"
+                  }
+                >
+                  Dashboard
+                </NavLink>
+                <button
+                  onClick={handleLogout}
+                  className="block w-full text-left px-4 py-2 text-black hover:bg-gray-100 rounded-2xl"
+                >
+                  Logout
+                </button>
+              </div>
+            )}
+          </div>
+
+           }
+
+           {
+            !token && <Link to={"/login-register"} className="">Login</Link>
+           }
+
           </div>
         </div>
 

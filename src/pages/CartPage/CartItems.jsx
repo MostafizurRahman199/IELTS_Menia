@@ -44,19 +44,20 @@ const CartItems = ({ cartCourses, rightServices }) => {
   };
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md">
+    <div className="bg-white  rounded-lg p-6 md:p-0">
       <h2 className="text-xl font-semibold mb-4">Your Items</h2>
       {cartCourses.map((course) => (
-        <div key={course._id} className="relative flex border-2 border-[#E5E5F0] rounded-md p-3 items-center justify-between mb-4">
-          <div className="flex flex-col sm:flex sm:flex-row items-center gap-4">
+       
+       <div key={course._id} className="relative  flex justify-between items-center border-2 border-[#E5E5F0] rounded-md p-3 mb-4">
+          <div className="flex flex-col   sm:flex sm:flex-row items-center gap-4">
             <img
               src={course.photo}
               alt={course.packageName}
               className="w-20 h-20 object-cover rounded-md"
             />
-            <div>
+            <div className="flex flex-col justify-end items-center">
               <h3 className="text-lg font-semibold">{course.packageName}</h3>
-              <p className="text-[#74788D] text-sm">{course.tags.join(", ")}</p>
+              <p className="text-[#74788D] text-sm text-center sm:text-start">{course.tags.join(", ")}</p>
               <p className="text-blue-600 font-semibold">
                 Tk. {course.price - course.discount}
               </p>
