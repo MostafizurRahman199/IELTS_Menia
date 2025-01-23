@@ -23,9 +23,9 @@ const Header = () => {
     <header className="bg-white shadow-sm p-4 w-10/12 mx-auto relative">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        <Link to={"/"} className="flex items-center space-x-2">
           <img src={logoMaac} alt="Logo" className="h-10 w-auto" />
-        </div>
+        </Link>
 
         {/* Desktop Navbar */}
         <div className="hidden md:flex items-center gap-4">

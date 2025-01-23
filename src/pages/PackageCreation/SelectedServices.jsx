@@ -324,17 +324,18 @@ const SelectedServices = ({ services, onQuantityChange }) => {
   return (
     <div className="bg-white p-4 rounded-lg shadow flex flex-col justify-between">
       <div>
-        <h2 className="text-2xl font-semibold m-4 text-start">Your Format</h2>
+        <h2 className="text-2xl font-semibold m-4 text-start">Your Service</h2>
         <DroppableArea id="format">
           {services.length === 0 ? (
-            <div className="text-center">
+            <div className="text-center flex flex-col justify-center items-center ">
               <img
                 src={animated}
                 alt="No Services Selected"
                 className="w-1/2 mx-auto"
               />
               <p className="text-gray-500 mt-4">
-                Your format is empty. Drag services here to add them.
+                <span className="text-black font-semibold">Your format is empty.</span>
+                <br /> Drag services here to add them.
               </p>
             </div>
           ) : (
@@ -350,11 +351,13 @@ const SelectedServices = ({ services, onQuantityChange }) => {
         </DroppableArea>
       </div>
 
-      <div className="border-t-2 flex flex-col justify-center py-8 px-4">
+      <div className="border-t-2 flex flex-col justify-between   px-4">
+        
         <div className="flex justify-between items-center my-8">
           <p className="text-2xl font-semibold">Total Price</p>
           <p className="text-2xl font-semibold">{totalPrice} Tk</p>
         </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 py-8">
           <button className="bg-[#e6eefa] w-full text-gray-700 px-4 py-3 rounded-lg">
             Save Draft

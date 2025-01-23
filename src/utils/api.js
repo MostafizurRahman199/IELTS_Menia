@@ -25,3 +25,44 @@ export const createPackage = async (payload, token) => {
     throw error;
   }
 };
+
+
+
+
+
+export const createOrder = async (couponCode, payload, token) => {
+  try {
+    const response = await axios.post(
+      `https://api.xampro.org/api/v1/order/createOrder?couponCode=${couponCode}&currencyType=USD`,
+      payload,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    return response; // Return the response data to the calling function
+  } catch (error) {
+    console.error("Error creating order:", error.response?.data || error.message);
+    throw error; // Rethrow the error for handling in the calling function
+  }
+};
+
+
+// Query function
+export const fetchCourses = async ({ queryKey }) => {
+  const [, { token, courseIds }] = queryKey;
+
+  const coursePromises = courseIds.map((courseId) =>
+    axios.get(
+      `https://api.xampro.org/api/v1/package/getsinglepackage/${courseId}`,
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    )
+  );
+
+  const courseResponses = await Promise.all(coursePromises);
+  return courseResponses.map((response) => response.data.singlePackage);
+};
+

@@ -17,6 +17,7 @@ import LandingPage from "../pages/LandingPage";
 import PackageCreation from "../pages/PackageCreation/PackageCreation";
 import Parent from "../pages/LoginRegister/Parent";
 import CartPage from "../pages/CartPage/CartPage";
+import DashBoard from "../pages/DashBoard/DashBoard";
 
 
 const router = createBrowserRouter([    
@@ -55,6 +56,18 @@ const router = createBrowserRouter([
                             <title>Job Seeker - Home</title>
                         </Helmet>
                         <CartPage></CartPage>
+                    </>
+                ),
+            },
+            
+            {
+                path: "/dashboard",
+                element: (
+                    <>
+                        <Helmet>
+                            <title>Job Seeker - Dashboard</title>
+                        </Helmet>
+                        <DashBoard></DashBoard>
                     </>
                 ),
             },
