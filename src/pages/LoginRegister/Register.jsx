@@ -71,8 +71,7 @@ const Register = () => {
           email: "",
           password: "",
           confirmPassword: "",
-          otherInfo:"",
-          university:"",
+    
 
         });
         setStudentIdCard(null);
@@ -185,7 +184,7 @@ const Register = () => {
         </div>
 
         {/* Upload Student ID Card */}
-        <div className="mb-2">
+        {/* <div className="mb-2">
           <div className="border-dashed border-2 border-[#818181] rounded-lg p-3 text-center cursor-pointer">
             <label className="cursor-pointer">
               <input
@@ -203,10 +202,10 @@ const Register = () => {
               )}
             </label>
           </div>
-        </div>
+        </div> */}
 
         {/* Upload Photo */}
-        <div className="mb-2">
+        {/* <div className="mb-2">
           <div className="border-dashed border-2 border-[#818181] rounded-lg p-3 text-center cursor-pointer">
             <label className="cursor-pointer">
               <input
@@ -224,10 +223,10 @@ const Register = () => {
               )}
             </label>
           </div>
-        </div>
+        </div> */}
 
         {/* University and Other Information */}
-        <div className="grid grid-cols-2 gap-4 mb-6">
+        {/* <div className="grid grid-cols-2 gap-4 mb-6">
           <div>
             <div className="flex items-center border rounded-lg p-3">
               <FaUniversity className="text-gray-400 mr-2" />
@@ -255,7 +254,7 @@ const Register = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Register Button */}
         <button

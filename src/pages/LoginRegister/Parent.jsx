@@ -6,38 +6,39 @@ import logoMaac from "../../../public/logoMaac.png";
 import vector1 from "../../../public/vector1.png";
 import vector2 from "../../../public/vector2.png";
 import vector3 from "../../../public/vector3.png";
+import bgLogin from "../../../public/bgLogin.png";
+import { Link } from "react-router-dom";
 
 const Parent = () => {
   const [isLogin, setIsLogin] = useState(true); // State to toggle between login and register
 
   return (
     <div className="grid grid-col-1 md:grid md:grid-cols-2 min-h-screen ">
+     
       {/* Left Side */}
-      <div className="relative bg-[#0052CC]  flex flex-col justify-end items-center text-white overflow-hidden">
-        {/* Background Images */}
-        <img
-          src={vector1}
-          alt="Background Vector 1"
-          className="absolute top-20 -right-48 w-4/5  opacity-10"
-        />
-        <img
-          src={vector2}
-          alt="Background Vector 2"
-          className="absolute top-0 left-0 w-2/3 opacity-10"
-        />
-
+      <div
+        className="bg-[#0052CC] flex  justify-center items-end w-full"
+        style={{
+          backgroundImage: `url(${bgLogin})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+         
+        }}
+      >
         {/* Logo */}
-        <img src={vector3} alt="Logo" className=" w-[80%] z-10" />
+        <img src={vector3} alt="Logo" className="w-[80%] z-10" />
+      </div>
+
 
     
-      </div>
 
       {/* Right Side */}
       <div className=" w-10/12 mx-auto bg-white ">
          
-          <div className="flex justify-end my-8">
+          <Link to={"/"} className="flex justify-end my-8">
             <img src={logoMaac} alt="Right Side Image" className="w-28" />
-          </div>
+          </Link>
         
        <div className="max-w-md mx-auto flex flex-col justify-center items-center">
           <div className="w-full">
