@@ -68,7 +68,7 @@ const PackageCreation = () => {
   if (error) return <p>Error fetching services</p>;
 
   return (
-    <div className="bg-[#f8f8fb]">
+    <div className="bg-[#f8f8fb] py-8">
       <div className="p-6 w-full sm:w-10/12 mx-auto">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-semibold">Create Package</h1>

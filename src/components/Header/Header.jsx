@@ -38,11 +38,11 @@ useEffect(()=>{
 },[token])
 
   return (
-    <header className="bg-white shadow-sm p-4 w-10/12 mx-auto relative">
-      <div className="container mx-auto flex items-center justify-between">
+    <header className="fixed z-50  bg-white shadow-sm p-4 w-full ">
+      <div className="w-10/12 mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link to={"/"} className="flex items-center space-x-2">
-          <img src={logoMaac} alt="Logo" className="h-10 w-auto" />
+          <img src={logoMaac} alt="Logo" className="h-auto w-24" />
         </Link>
 
         {/* Desktop Navbar */}
@@ -50,7 +50,7 @@ useEffect(()=>{
           <nav className="flex gap-4">
             <div className="flex items-center gap-1">
               <NavLink
-                to="/package-creation"
+                to="/Exam Package"
                 className={({ isActive }) =>
                   isActive
                     ? "text-blue-500 font-bold"
@@ -61,16 +61,37 @@ useEffect(()=>{
               </NavLink>
               <FaAngleRight />
             </div>
+
+
+              <div className="flex items-center gap-1">
+
             <NavLink
               to="/free-test"
               className={({ isActive }) =>
                 isActive
-                  ? "text-blue-500 font-bold"
-                  : "text-black hover:text-blue-500"
-              }
+              ? "text-blue-500 font-bold"
+              : "text-black hover:text-blue-500"
+            }
             >
               Free Test
             </NavLink>
+            <FaAngleRight />
+              </div>
+
+              <div className="flex items-center gap-1">
+
+            <NavLink
+              to="/package-creation"
+              className={({ isActive }) =>
+                isActive
+              ? "text-blue-500 font-bold"
+              : "text-black hover:text-blue-500"
+            }
+            >
+              Create Package
+            </NavLink>
+            <FaAngleRight />
+              </div>
           </nav>
 
           {/* Right Icons */}
@@ -101,7 +122,7 @@ useEffect(()=>{
 
             {/* Dropdown Menu */}
             {dropdownOpen && (
-              <div className="absolute z-10 right-0 mt-2 w-48 bg-white border border-gray-200 rounded-2xl shadow-lg">
+              <div className="absolute z-50 right-0 mt-2 w-48 bg-white border border-gray-200 rounded-2xl shadow-lg">
                 <NavLink
                   to="/dashboard"
                   className={({ isActive }) =>
@@ -125,7 +146,16 @@ useEffect(()=>{
            }
 
            {
-            !token && <Link to={"/login-register"} className="">Login</Link>
+            !token &&   <NavLink
+            to="/login-register"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-500 font-bold"
+                : "text-black hover:text-blue-500"
+            }
+          >
+            Login
+          </NavLink>
            }
 
           </div>
@@ -175,6 +205,17 @@ useEffect(()=>{
               onClick={toggleMobileNav}
             >
               Free Test
+            </NavLink>
+            <NavLink
+              to="/package-creation"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-blue-500 font-bold"
+                  : "text-black hover:text-blue-500"
+              }
+              onClick={toggleMobileNav}
+            >
+              Create Package
             </NavLink>
             <div className="border-t border-gray-200 w-full my-2"></div>
             <NavLink

@@ -49,7 +49,7 @@ const WebsiteReview = () => {
           title: 'Review Submitted',
           text: 'Thank you for your feedback!',
           confirmButtonText: 'OK',
-          confirmButtonColor: '#A91D3A',
+          confirmButtonColor: '#0052CC',
         });
         setLoading(false);
         setFormData({name: "",  profession: '', description: '', rating: 1 });
@@ -62,7 +62,7 @@ const WebsiteReview = () => {
         title: 'Submission Failed',
         text: 'There was an error submitting your review. Please try again.',
         confirmButtonText: 'OK',
-        confirmButtonColor: '#A91D3A',
+        confirmButtonColor: '#0052CC',
         
       });
     }
@@ -75,8 +75,8 @@ const WebsiteReview = () => {
 
   return (
    <div>
-     <h2 className="font_header text-3xl h-[100px]  sm:text-3xl md:text-5xl font-bold  text-[#A91D3A] text-center mb-6 ">
-     <span style={{ color: '#A91D3A', fontWeight: 'bold' }} className='font_header'>
+     <h2 className="font_header text-3xl h-[100px]  sm:text-3xl md:text-5xl font-bold  text-[#0052CC] text-center mb-6 ">
+     <span style={{ color: '#0052CC', fontWeight: 'bold' }} className='font_header'>
           {/* Style will be inherited from the parent element */}
           <Typewriter
             words={['Send Website Review',"Review For Website", "It's Dynamic", "Review For Website"]}
@@ -152,7 +152,7 @@ const WebsiteReview = () => {
           <div>
             <button
               type="submit"
-              className="w-full py-3 bg-[#A91D3A] text-white text-xl font-semibold rounded-lg hover:bg-[#9c1631] transition-all duration-300 flex justify-center items-center gap-2"
+              className="w-full py-3 bg-[#0052CC] text-white text-xl font-semibold rounded-lg hover:bg-[#9c1631] transition-all duration-300 flex justify-center items-center gap-2"
             >
              { loading ? <div className="animate-spin rounded-full h-8 w-8 border-t-4 border-white"></div> : <> Submit Review <Lottie
       animationData={send}

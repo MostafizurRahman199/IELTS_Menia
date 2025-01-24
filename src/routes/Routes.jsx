@@ -1,10 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Helmet } from "react-helmet";
-
-import Register from "../pages/Register";
-import Login from "../pages/Login";
-
-import ForgetPassword from "../pages/ForgetPassword";
 import MainLayout from "../layouts/MainLayout";
 
 import Profile from "../pages/Profile";
@@ -12,7 +7,7 @@ import Profile from "../pages/Profile";
 import PrivateRoute from "./PrivateRoute";
 import UpdateProfile from "../pages/UpdateProfile";
 import ErrorPage from "../pages/ErrorPage";
-import Home from "../pages/Home/Home";
+
 import LandingPage from "../pages/LandingPage";
 import PackageCreation from "../pages/PackageCreation/PackageCreation";
 import Parent from "../pages/LoginRegister/Parent";
@@ -30,7 +25,7 @@ const router = createBrowserRouter([
                 element: (
                     <>
                         <Helmet>
-                            <title>Job Seeker - Home</title>
+                            <title>Xam - Home</title>
                         </Helmet>
                         <LandingPage></LandingPage>
                     </>
@@ -42,7 +37,7 @@ const router = createBrowserRouter([
                 element: (
                     <>
                         <Helmet>
-                            <title>Job Seeker - Home</title>
+                            <title>Xam - Package Creation</title>
                         </Helmet>
                         <PackageCreation></PackageCreation>
                     </>
@@ -53,7 +48,7 @@ const router = createBrowserRouter([
                 element: (
                     <>
                         <Helmet>
-                            <title>Job Seeker - Home</title>
+                            <title>Xam - Cart</title>
                         </Helmet>
                         <CartPage></CartPage>
                     </>
@@ -65,7 +60,7 @@ const router = createBrowserRouter([
                 element: (
                     <>
                         <Helmet>
-                            <title>Job Seeker - Dashboard</title>
+                            <title>Xam - Dashboard</title>
                         </Helmet>
                         <DashBoard></DashBoard>
                     </>
@@ -73,49 +68,16 @@ const router = createBrowserRouter([
             },
             
            
-            {
-                path: "/register",
-                element: (
-                    <>
-                        <Helmet>
-                            <title>Job Seeker - Register</title>
-                        </Helmet>
-                        <Register />
-                    </>
-                ),
-            },
+      
+           
+           
            
             {
                 path: "/",
                 element: (
                     <>
                         <Helmet>
-                            <title>Job Seeker - All Reviews</title>
-                        </Helmet>
-                      
-                    </>
-                ),
-               
-            },
-            {
-                path: "",
-                element: (
-                    <>
-                        <Helmet>
-                            <title>Job Seeker - Review Details</title>
-                        </Helmet>
-                        
-                    </>
-                ),
-               
-            },
-           
-            {
-                path: "/",
-                element: (
-                    <>
-                        <Helmet>
-                            <title>Job Seeker - Add Review</title>
+                            <title>Xam - Add Review</title>
                         </Helmet>
                         <PrivateRoute>
                            {/* write a component  */}
@@ -123,32 +85,7 @@ const router = createBrowserRouter([
                     </>
                 ),
             },
-            {
-                path: "/",
-                element: (
-                    <>
-                        <Helmet>
-                            <title>Job Seeker - My Review</title>
-                        </Helmet>
-                        <PrivateRoute>
-                           {/* write a component  */}
-                        </PrivateRoute>
-                    </>
-                ),
-            },
-            {
-                path: "/",
-                element: (
-                    <>
-                        <Helmet>
-                            <title>Job Seeker - Game WatchList</title>
-                        </Helmet>
-                        <PrivateRoute>
-                            {/* write a component  */}
-                        </PrivateRoute>
-                    </>
-                ),
-            },
+           
            
          
             {
@@ -156,29 +93,19 @@ const router = createBrowserRouter([
                 element: (
                     <>
                         <Helmet>
-                            <title>Job Seeker - Login</title>
+                            <title>Xam - Login</title>
                         </Helmet>
                         <Parent></Parent>
                     </>
                 ),
             },
-            {
-                path: "/forgot-password",
-                element: (
-                    <>
-                        <Helmet>
-                            <title>Job Seeker - Forgot Password</title>
-                        </Helmet>
-                        <ForgetPassword />
-                    </>
-                ),
-            },
+           
             {
                 path: "/my-profile",
                 element: (
                     <>
                         <Helmet>
-                            <title>Job Seeker - My Profile</title>
+                            <title>Xam - My Profile</title>
                         </Helmet>
                         <PrivateRoute>
                             <Profile />
@@ -191,7 +118,7 @@ const router = createBrowserRouter([
                 element: (
                     <>
                         <Helmet>
-                            <title>Job Seeker - Update Profile</title>
+                            <title>Xam - Update Profile</title>
                         </Helmet>
                         <PrivateRoute>
                             <UpdateProfile />
@@ -208,7 +135,7 @@ const router = createBrowserRouter([
         element: (
             <>
                 <Helmet>
-                    <title>Job Seeker - Error</title>
+                    <title>Xam - Error</title>
                 </Helmet>
                 <ErrorPage />
             </>

@@ -5,7 +5,7 @@ import gamerLogo from "../assets/gamer3.png"
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-r from-[#A91D3A] to-[#151515]">
+    <footer className="relative bg-gradient-to-r from-[#0052CC] to-[#151515]">
 
   
 

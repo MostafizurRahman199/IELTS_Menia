@@ -86,7 +86,7 @@ const Register = () => {
             <div className="w-full flex flex-col md:flex md:flex-row justify-center items-center gap-4  space-y-8 sm:shadow-custom  p-8  rounded-2xl bg-[#000000]" data-aos="fade-up">
               <div className='flex-1'>
               <div>
-                    <h2 className="mt-6 text-center text-3xl font-extrabold text-[#A91D3A]">
+                    <h2 className="mt-6 text-center text-3xl font-extrabold text-[#0052CC]">
                         Create your account
                     </h2>
                 </div>
@@ -96,7 +96,7 @@ const Register = () => {
                             <input
                                 type="text"
                                 required
-                                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-[#A91D3A] focus:border-[#A91D3A] focus:z-10 sm:text-sm"
+                                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-[#0052CC] focus:border-[#0052CC] focus:z-10 sm:text-sm"
                                 placeholder="Full Name"
                                 onChange={(e) => setFormData({...formData, name: e.target.value})}
                             />
@@ -105,7 +105,7 @@ const Register = () => {
                             <input
                                 type="email"
                                 required
-                                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-[#A91D3A] focus:border-[#A91D3A] focus:z-10 sm:text-sm"
+                                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-[#0052CC] focus:border-[#0052CC] focus:z-10 sm:text-sm"
                                 placeholder="Email address"
                                 onChange={(e) => setFormData({...formData, email: e.target.value})}
                             />
@@ -114,7 +114,7 @@ const Register = () => {
                             <input
                                 type="url"
                                 required
-                                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-[#A91D3A] focus:border-[#A91D3A] focus:z-10 sm:text-sm"
+                                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-[#0052CC] focus:border-[#0052CC] focus:z-10 sm:text-sm"
                                 placeholder="Photo URL"
                                 onChange={(e) => setFormData({...formData, photoURL: e.target.value})}
                             />
@@ -123,7 +123,7 @@ const Register = () => {
                             <input
                                 type={showPassword ? "text" : "password"}
                                 required
-                                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-[#A91D3A] focus:border-[#A91D3A] sm:text-sm pr-10"
+                                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-[#0052CC] focus:border-[#0052CC] sm:text-sm pr-10"
                                 placeholder="Password"
                                 onChange={(e) => setFormData({...formData, password: e.target.value})}
                             />
@@ -148,7 +148,7 @@ const Register = () => {
                     <div>
                         <button
                             type="submit"
-                            className="group relative w-full flex justify-center  border border-transparent text-sm  bg-[#A91D3A] hover:bg-[#9c1631]focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#A91D3A] px-8 py-3 rounded-md text-white font-bold transition-transform hover:scale-105 shadow-2xl">
+                            className="group relative w-full flex justify-center  border border-transparent text-sm  bg-[#0052CC] hover:bg-[#9c1631]focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0052CC] px-8 py-3 rounded-md text-white font-bold transition-transform hover:scale-105 shadow-2xl">
                             Register
                         </button>
                     </div>
@@ -172,7 +172,7 @@ const Register = () => {
 
                 <p className="mt-2 text-center text-sm text-gray-600">
                     Already have an account?{' '}
-                    <Link to="/login" className="font-medium text-[#A91D3A] hover:text-white">
+                    <Link to="/login" className="font-medium text-[#0052CC] hover:text-white">
                         Login here
                     </Link>
                 </p>

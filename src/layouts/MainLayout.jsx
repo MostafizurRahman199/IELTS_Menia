@@ -45,15 +45,18 @@ const MainLayout = () => {
             <ToastContainer />
             {loading ? (
               <div className="flex justify-center items-center min-h-screen">
-                <FaSpinner className="animate-spin text-4xl text-[#A91D3A]" />
+                <FaSpinner className="animate-spin text-4xl text-[#0052CC]" />
               </div>
             ) : (
               <>
                 {!hideHeaderFooter && <Header />}
-                <div className="h-fit">
+                <div className={`h-fit ${location.pathname == "/login-register" ? "pt-0" : "pt-20" }`}>
                   <Outlet />
                 </div>
-                {hideFooter ? <SecondaryFooter></SecondaryFooter>  : <Footer></Footer>}
+                {
+                 location.pathname === "/login-register" ? <></> : ( hideFooter  ? <SecondaryFooter></SecondaryFooter>  : <Footer></Footer>)
+                
+               }
               </>
             )}
           </div>

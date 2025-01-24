@@ -54,11 +54,11 @@ const Navbar = () => {
   // const getLinkStyle = (path) => `
   //   relative px-2  py-2 text-sm font-medium transition-colors duration-200
   //   ${activeLink === path 
-  //     ? 'text-[#A91D3A]' 
-  //     : 'text-gray-700 hover:text-[#A91D3A]'
+  //     ? 'text-[#0052CC]' 
+  //     : 'text-gray-700 hover:text-[#0052CC]'
   //   }
   //   before:absolute before:bottom-0 before:left-0 before:w-full before:h-0.5 
-  //   before:bg-[#A91D3A] before:transform before:scale-x-0 before:transition-transform
+  //   before:bg-[#0052CC] before:transform before:scale-x-0 before:transition-transform
   //   before:duration-300 hover:before:scale-x-100
   //   ${activeLink === path ? 'before:scale-x-100' : ''}
   // `;
@@ -66,9 +66,9 @@ const Navbar = () => {
 
     const getLinkStyle = (path) => `
     relative px-2 py-2 text-sm font-bold  font_header transition-colors duration-200
-    ${activeLink === path ? 'text-[#A91D3A]' : 'text-black hover:text-[#A91D3A]'}
+    ${activeLink === path ? 'text-[#0052CC]' : 'text-black hover:text-[#0052CC]'}
     before:absolute before:bottom-0 before:left-0 before:w-full before:h-0.5 
-    before:bg-[#A91D3A] before:transform before:scale-x-0 before:transition-transform
+    before:bg-[#0052CC] before:transform before:scale-x-0 before:transition-transform
     before:duration-300 hover:before:scale-x-100
     ${activeLink === path ? 'before:scale-x-100' : ''}
   `;
@@ -175,7 +175,7 @@ const Navbar = () => {
                 src={gamerLogo}
                 alt="Logo"
               />
-              <span className="font_header text-3xl sm:text-3xl md:text-xl lg:text-3xl text-md font-bold bg-gradient-to-r from-[#A91D3A] to-[#151515] bg-clip-text text-transparent truncate">
+              <span className="font_header text-3xl sm:text-3xl md:text-xl lg:text-3xl text-md font-bold bg-gradient-to-r from-[#0052CC] to-[#151515] bg-clip-text text-transparent truncate">
               Job Seeker
               </span>
             </Link>
@@ -255,7 +255,7 @@ const Navbar = () => {
   
                 <button
                   onClick={handleLogout}
-                  className="bg-[#151515]  px-2 py-2 rounded-3xl text-white text-sm font-semibold transition-transform hover:scale-105 shadow-2xl  hover:bg-[#A91D3A] "
+                  className="bg-[#151515]  px-2 py-2 rounded-3xl text-white text-sm font-semibold transition-transform hover:scale-105 shadow-2xl  hover:bg-[#0052CC] "
                     >
                       Logout
                     </button>
@@ -265,7 +265,7 @@ const Navbar = () => {
               <>
               <Link
                 to="/login"
-               className=" px-6 py-2 rounded-3xl text-white font-bold transition-transform hover:scale-105 shadow-2xl bg-[#A91D3A] "
+               className=" px-6 py-2 rounded-3xl text-white font-bold transition-transform hover:scale-105 shadow-2xl bg-[#0052CC] "
               >
                 Login
               </Link>
@@ -286,7 +286,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center ml-2">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="inline-flex items-center justify-center p-1 rounded-md text-[#A91D3A] hover:text-[#A91D3A]  focus:outline-none focus:ring-1 focus:ring-inset focus:ring-[#A91D3A]"
+              className="inline-flex items-center justify-center p-1 rounded-md text-[#0052CC] hover:text-[#0052CC]  focus:outline-none focus:ring-1 focus:ring-inset focus:ring-[#0052CC]"
             >
               <span className="sr-only">Open main menu</span>
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -396,7 +396,7 @@ const Navbar = () => {
             user && (
               <button
               onClick={handleLogout}
-              className="bg-[#151515]  px-6 py-2 rounded-3xl text-white font-semibold transition-transform hover:scale-105 shadow-2xl  hover:bg-[#A91D3A] "
+              className="bg-[#151515]  px-6 py-2 rounded-3xl text-white font-semibold transition-transform hover:scale-105 shadow-2xl  hover:bg-[#0052CC] "
             >
               Logout
             </button>
@@ -480,9 +480,9 @@ export default Navbar
 
 //   const getLinkStyle = (path) => `
 //     relative px-2 py-2 text-sm font-medium transition-colors duration-200
-//     ${activeLink === path ? 'text-[#A91D3A]' : 'text-gray-700 hover:text-[#A91D3A]'}
+//     ${activeLink === path ? 'text-[#0052CC]' : 'text-gray-700 hover:text-[#0052CC]'}
 //     before:absolute before:bottom-0 before:left-0 before:w-full before:h-0.5 
-//     before:bg-[#A91D3A] before:transform before:scale-x-0 before:transition-transform
+//     before:bg-[#0052CC] before:transform before:scale-x-0 before:transition-transform
 //     before:duration-300 hover:before:scale-x-100
 //     ${activeLink === path ? 'before:scale-x-100' : ''}
 //   `;
@@ -530,7 +530,7 @@ export default Navbar
 //           <div className="flex-shrink-0">
 //             <Link to="/" className="flex items-center space-x-4">
 //               <img className="block md:hidden lg:block h-10 w-auto sm:h-10" src={logo} alt="Logo" />
-//               <span className="text-3xl sm:text-3xl md:text-xl lg:text-3xl font-bold bg-gradient-to-r from-[#A91D3A] to-[#151515] bg-clip-text text-transparent">
+//               <span className="text-3xl sm:text-3xl md:text-xl lg:text-3xl font-bold bg-gradient-to-r from-[#0052CC] to-[#151515] bg-clip-text text-transparent">
 //                 Job Seeker
 //               </span>
 //             </Link>
@@ -568,13 +568,13 @@ export default Navbar
 //                 <Link to="/my-profile" className="flex flex-col lg:flex-row items-center justify-center gap-2">
 //                   <ProfileImage user={user} />
 //                 </Link>
-//                 <button onClick={handleLogout} className="bg-[#151515] px-6 py-2 rounded-3xl text-white font-semibold hover:bg-[#A91D3A] transition-all">
+//                 <button onClick={handleLogout} className="bg-[#151515] px-6 py-2 rounded-3xl text-white font-semibold hover:bg-[#0052CC] transition-all">
 //                   Logout
 //                 </button>
 //               </div>
 //             ) : (
 //               <>
-//                 <Link to="/login" className="px-6 py-2 rounded-3xl text-white font-bold bg-[#A91D3A] hover:scale-105 transition-all">
+//                 <Link to="/login" className="px-6 py-2 rounded-3xl text-white font-bold bg-[#0052CC] hover:scale-105 transition-all">
 //                   Login
 //                 </Link>
 //                 <Link to="/register" className="px-6 py-2 rounded-3xl text-white font-bold bg-[#151515] hover:scale-105 transition-all">
@@ -624,12 +624,12 @@ export default Navbar
 //           </div>
 
 //           {user ? (
-//             <button onClick={handleLogout} className="bg-[#151515] px-6 py-2 rounded-3xl text-white font-semibold hover:bg-[#A91D3A] transition-all">
+//             <button onClick={handleLogout} className="bg-[#151515] px-6 py-2 rounded-3xl text-white font-semibold hover:bg-[#0052CC] transition-all">
 //               Logout
 //             </button>
 //           ) : (
 //             <>
-//               <Link to="/login" className="block py-2 text-center text-[#A91D3A]">Login</Link>
+//               <Link to="/login" className="block py-2 text-center text-[#0052CC]">Login</Link>
 //               <Link to="/register" className="block py-2 text-center text-[#151515]">Register</Link>
 //             </>
 //           )}
