@@ -49,7 +49,6 @@ This project implements a **Landing Page**, **Popular Courses Section**, **Packa
 - **SweetAlert2**: Modals and alerts.
 
 ### Backend Integration
-- **Firebase**: Authentication and storage.
 - **REST API**: Backend API for fetching data and user interactions.
 
 ### Development Tools
