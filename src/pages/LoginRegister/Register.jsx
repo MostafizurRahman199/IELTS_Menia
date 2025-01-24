@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import {
   FaUser,
@@ -12,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import axios from "axios";
+import Swal from 'sweetalert2';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -60,19 +59,37 @@ const Register = () => {
       if (response.status === 200 || response.status === 201) {
         console.log(response)
         setSuccessMessage("Registration successful!");
+        Swal.fire({
+          title: 'Registration successful!',
+          text: 'Please verify your email.',
+          icon: 'success',
+          confirmButtonText: 'OK'
+        });
         setFormData({
           fullName: "",
           phone: "",
           email: "",
           password: "",
           confirmPassword: "",
+          otherInfo:"",
+          university:"",
+
         });
         setStudentIdCard(null);
         setPhoto(null);
+       
       } else {
         setErrorMessage("Registration failed. Please try again.");
       }
     } catch (error) {
+
+      Swal.fire({
+        title: 'Opp!',
+        text:  error.response?.data?.message,
+        icon: 'error',
+        confirmButtonText: 'OK'
+      });
+
       setErrorMessage(
         error.response?.data?.message || "An error occurred. Please try again."
       );
@@ -246,7 +263,7 @@ const Register = () => {
           className="w-full bg-[#0052CC] text-white py-3 rounded-lg hover:bg-blue-700 transition"
           disabled={loading}
         >
-          {loading ? "Registering..." : "Registration →"}
+          {loading ? <span className="loading loading-spinner loading-sm"></span> : "Registration →"}
         </button>
 
         {/* Error Message */}

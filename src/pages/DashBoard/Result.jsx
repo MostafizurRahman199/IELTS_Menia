@@ -105,7 +105,7 @@ const Result = () => {
   const colors = ["yellow", "lime", "purple", "green"];
 
   return (
-    <div className="pt-16 flex flex-col items-center  min-h-screen px-2 sm:px-4">
+    <div className="py-16 flex flex-col items-center  min-h-screen px-2 sm:px-4">
       <h1 className="text-3xl sm:text-4xl font-semibold text-gray-800 mb-8">My IELTS Result</h1>
       <div className="w-full bg-white p-4 sm:p-6 md:p-12 rounded-3xl shadow-2xl ">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">

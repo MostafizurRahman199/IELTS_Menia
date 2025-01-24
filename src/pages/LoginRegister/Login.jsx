@@ -128,10 +128,10 @@ const Login = () => {
         {/* Login Button */}
         <button
           type="submit"
-          className="w-full bg-[#0052CC] text-white py-3 rounded-lg hover:bg-blue-700 transition"
+          className="w-full bg-[#0052CC] transition-all  text-white py-3 rounded-lg hover:bg-blue-700 "
           disabled={loading}
         >
-          {loading ? "Logging in..." : "Log In →"}
+          {loading ? <span className="loading loading-spinner loading-sm"></span> : "Log In →"}
         </button>
       </form>
 

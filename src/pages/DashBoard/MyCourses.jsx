@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { FaRegClock, FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const MyCourses = ({ courses }) => {
+const MyCourses = ({ courses=[] }) => {
   const [timers, setTimers] = useState({});
 
   // Initialize timers for each course based on validity
