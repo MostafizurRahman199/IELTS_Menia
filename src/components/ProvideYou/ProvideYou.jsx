@@ -1,84 +1,3 @@
-// import React from "react";
-// import examPackageImage from "../../../public/provide1.png";
-// import facilatorImage from "../../../public/provide2.png";
-// import tricksImage from "../../../public/provide3.png";
-// import scoreImage from "../../../public/provide4.png";
-
-// const ProvideYou = () => {
-//   return (
-//     <div
-//       className="flex flex-col items-center justify-center py-24 px-4 bg-blue-600 text-white"
-//       style={{
-//         backgroundImage: `url('/provideBG.png')`,
-//         backgroundSize: "cover",
-//         backgroundPosition: "center",
-//       }}
-//     >
-//       {/* Header */}
-//       <h2 className="text-3xl font-semibold mb-8 text-center">
-//         We will provide you
-//       </h2>
-
-//       {/* Icons Section */}
-//       <div className="flex flex-wrap justify-center items-center gap-6 w-10/12">
-//         {/* Full Exam Packages */}
-//         <div className="flex flex-col items-center justify-center bg-white text-gray-800 p-6 rounded-xl shadow-lg w-64">
-//           <img
-//             src={examPackageImage}
-//             alt="Full Exam Packages"
-//             className="w-16 h-16 mb-4"
-//           />
-//           <p className="text-center text-lg font-semibold">Full exam packages</p>
-//         </div>
-
-//         {/* Plus Sign */}
-//         <p className="text-4xl font-bold text-white hidden sm:block">+</p>
-
-//         {/* Top Facilitator */}
-//         <div className="flex flex-col items-center justify-center bg-white text-gray-800 p-6 rounded-xl shadow-lg w-64">
-//           <img
-//             src={facilatorImage}
-//             alt="Top Facilitator"
-//             className="w-16 h-16 mb-4"
-//           />
-//           <p className="text-center text-lg font-semibold">Top facilitator</p>
-//         </div>
-
-//         {/* Plus Sign */}
-//         <p className="text-4xl font-bold text-white hidden sm:block">+</p>
-
-//         {/* Best Tricks */}
-//         <div className="flex flex-col items-center justify-center bg-white text-gray-800 p-6 rounded-xl shadow-lg w-64">
-//           <img
-//             src={tricksImage}
-//             alt="Best Tricks"
-//             className="w-16 h-16 mb-4"
-//           />
-//           <p className="text-center text-lg font-semibold">
-//             Best tricks for the exam
-//           </p>
-//         </div>
-
-//         {/* Equals Sign */}
-//         <p className="text-4xl font-bold text-white hidden sm:block">=</p>
-
-//         {/* Highest Scores */}
-//         <div className="flex flex-col items-center justify-center bg-white text-gray-800 p-6 rounded-xl shadow-lg w-64">
-//           <img
-//             src={scoreImage}
-//             alt="Highest Scores"
-//             className="w-16 h-16 mb-4"
-//           />
-//           <p className="text-center text-lg font-semibold">Highest scores</p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ProvideYou;
-
-
 
 import React from "react";
 import examPackageImage from "../../../public/provide1.png";
@@ -87,6 +6,9 @@ import tricksImage from "../../../public/provide3.png";
 import scoreImage from "../../../public/provide4.png";
 import { LuEqual } from "react-icons/lu";
 import { FiPlus } from "react-icons/fi";
+import Aos from "aos";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const ProvideYou = () => {
@@ -129,7 +51,9 @@ const ProvideYou = () => {
       </h2>
 
       {/* Icons Section */}
-      <div className="flex flex-wrap justify-center items-center gap-6 w-11/12">
+      <div
+      data-aos="fade-down"
+      className="flex flex-wrap justify-center items-center gap-6 w-11/12">
         {cards.map((card, index) => (
           <React.Fragment key={card.id}>
             {/* Card */}

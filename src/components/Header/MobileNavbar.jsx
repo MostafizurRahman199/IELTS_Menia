@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 
-const MobileNavbar = ({ isOpen, onClose, token, handleLogout }) => {
+const MobileNavbar = ({ isOpen, onClose, token, handleLogout, userName }) => {
   return (
     <div
       className={`fixed top-0 right-0 h-full bg-white z-20 transform ${
@@ -17,6 +17,9 @@ const MobileNavbar = ({ isOpen, onClose, token, handleLogout }) => {
 
         {/* Navigation Links */}
         <nav className="flex flex-col items-start space-y-4">
+          <p className="text-black hover:text-blue-500">
+            Hi, {userName}
+          </p>
           <NavLink
             to="/Exam Package"
             className={({ isActive }) =>

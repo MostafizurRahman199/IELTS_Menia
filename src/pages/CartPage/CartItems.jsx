@@ -29,6 +29,8 @@ const CartItems = ({ cartCourses, rightServices }) => {
       icon: "info",
       title: "Removed",
       text: "Course removed from cart.",
+      showConfirmButton: false,
+      timer: 1000,
     });
   };
 
@@ -55,7 +57,7 @@ const CartItems = ({ cartCourses, rightServices }) => {
               alt={course.packageName}
               className="w-20 h-20 object-cover rounded-md"
             />
-            <div className="flex flex-col justify-end items-center">
+            <div className="flex flex-col justify-end items-center sm:items-start">
               <h3 className="text-lg font-semibold">{course.packageName}</h3>
               <p className="text-[#74788D] text-sm text-center sm:text-start">{course.tags.join(", ")}</p>
               <p className="text-blue-600 font-semibold">

@@ -3,7 +3,7 @@
 
 
 
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Outlet, useLocation } from "react-router-dom";
 
@@ -19,7 +19,8 @@ import Header from "../components/Header/Header";
 import {store} from "../store/store";
 import Footer from "../components/Footer/Footer";
 import SecondaryFooter from "../components/Footer/SecondaryFooter";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,17 @@ const MainLayout = () => {
   // Check if current route matches any route in the list
   const hideHeaderFooter = noHeaderFooterRoutes.includes(location.pathname);   
   const hideFooter = noFooterRoutes.includes(location.pathname);
+
+
+
+  
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      easing: "ease-in-out", // Easing function
+    });
+  }, []);
+
 
   return (
     <Provider store={store}>

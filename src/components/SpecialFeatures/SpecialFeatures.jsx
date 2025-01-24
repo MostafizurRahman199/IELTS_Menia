@@ -5,6 +5,9 @@ import checkPerformance from "../../../public/checkPerformance.png";
 import instantResult from "../../../public/instantResult.png";
 import fullExamPackage from "../../../public/fullExamPackage.png";
 import FeatureCard from "./FeatureCard";
+import Aos from "aos";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SpecialFeatures = () => {
   const features = [
@@ -38,7 +41,9 @@ const SpecialFeatures = () => {
     <section className="pb-12 pt-44 bg-[#f3f6fc]">
       <div className="w-10/12 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
         {/* Header */}
-        <div className="md:col-span-2 bg-[#0052CC] text-white rounded-2xl p-12">
+        <div 
+        data-aos="flip-up"
+        className="md:col-span-2 bg-[#0052CC] text-white rounded-2xl p-12">
           <h2 className="text-2xl  my-2 sm:text-4xl font-semibold">
             Our special features   
           </h2>

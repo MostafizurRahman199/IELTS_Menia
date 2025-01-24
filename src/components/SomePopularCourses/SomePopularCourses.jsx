@@ -1,17 +1,4 @@
-// import React from 'react'
 
-// const SomePopularCourses = () => {
-
-// //have to use tanSack query to get the data from the api
-// // also suggest folder structure as i will use redux
-// // api link  : https://api.xampro.org/api/v1/package/get-top-three-popular-package
-
-//   return (
-//     <div>SomePopularCourses</div>
-//   )
-// }
-
-// export default SomePopularCourses
 
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
@@ -20,6 +7,7 @@ import CourseCard from "./CourseCard";
 import { fetchClient } from "../../utils/fetchClient";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+
 
 const fetchPopularCourses = () =>
   fetchClient(

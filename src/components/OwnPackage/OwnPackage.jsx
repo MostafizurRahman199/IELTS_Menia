@@ -1,12 +1,17 @@
 import React from "react";
 import rightSideStudyImage from "../../../public/study.png";
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const OwnPackage = () => {
   return (
     <div className="w-full md:w-10/12 mx-auto flex flex-col md:flex-row items-center justify-between px-2 md:px-6   bg-white h-[600px]">
       {/* Left Section */}
-      <div className="flex flex-col items-start max-w-md gap-4">
+      <div
+      data-aos="zoom-in"
+      className="flex flex-col items-start max-w-md gap-4">
         <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1E266D] mb-4 leading-relaxed">
           Create your own package
         </p>

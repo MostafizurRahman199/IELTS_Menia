@@ -34,10 +34,11 @@ const Login = () => {
 
       if (response.status === 200 || response.status === 201) {
         const token = response.data.token;
-        console.log(response.data)
+        const userName = response.data.UserLogin.data.fullName
 
         // Save the token to localStorage
         localStorage.setItem("token", token);
+        localStorage.setItem("userName", userName);
 
         // Success alert
         Swal.fire({

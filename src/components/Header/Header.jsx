@@ -13,6 +13,7 @@ const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [token, setToken] = useState("");
+  const [userName, setUserName] = useState("");
 
   const toggleDropdown = () => setDropdownOpen((prev) => !prev);
 
@@ -32,7 +33,10 @@ const Header = () => {
 
   useEffect(() => {
     const storedToken = localStorage.getItem("token");
+    const userName = localStorage.getItem("userName");
     setToken(storedToken);
+    setUserName(userName);
+
   }, []);
 
   return (
@@ -111,7 +115,7 @@ const Header = () => {
                     className="h-8 w-8 rounded-full border"
                   />
                   <div className="flex items-center gap-1 transition-all duration-300">
-                    <span className="text-black">Esther</span>
+                    <span className="text-black">{userName?.slice(0,12)}</span>
                     {
                       dropdownOpen === true ? <FaAngleDown /> : <FaAngleRight />
                     }
@@ -166,6 +170,7 @@ const Header = () => {
 
       {/* Mobile Navbar */}
       <MobileNavbar
+        userName={userName}
         isOpen={mobileNavOpen}
         onClose={toggleMobileNav}
         token={token}

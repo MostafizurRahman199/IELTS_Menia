@@ -1,13 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
+import Aos from "aos";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const FeatureCard = ({ feature }) => {
 
   if (!feature) return null;
 
   return (
-    <div className="bg-white shadow-md rounded-2xl p-8 text-start space-y-4 hover:shadow-lg transition-shadow duration-300">
+    <div
+     data-aos="flip-left"
+    className="bg-white shadow-md rounded-2xl p-8 text-start space-y-4 hover:shadow-lg transition-shadow duration-300">
       <img src={feature.image} alt={feature.title} className="w-12 h-12" />
       <h3 className="text-2xl font-semibold text-[#0052CC]">
         {feature.title}
@@ -28,3 +34,5 @@ const FeatureCard = ({ feature }) => {
 };
 
 export default FeatureCard;
+
+

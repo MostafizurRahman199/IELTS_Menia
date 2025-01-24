@@ -8,6 +8,9 @@ import { addToCart } from "../../store/features/courseSlice"; // Import the addT
 import Swal from "sweetalert2"; // Import SweetAlert2
 import { FaRegClock } from "react-icons/fa6";
 import { FaBook, FaHeadphones, FaPencilAlt, FaMicrophone } from "react-icons/fa";
+import Aos from "aos";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const CourseCard = ({ course }) => {
   const dispatch = useDispatch();
@@ -35,7 +38,9 @@ const CourseCard = ({ course }) => {
   };
 
   return (
-    <div className="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between">
+    <div
+    data-aos="zoom-in"
+    className="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between">
       {/* Course Image */}
       <div>
         <div className="relative">

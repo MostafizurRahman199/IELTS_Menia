@@ -26,7 +26,7 @@ const DraggableItem = ({ service, isRightSide, onQuantityChange }) => {
       {...listeners}
       {...attributes}
       style={style}
-      className="flex justify-between items-center border p-3 rounded-lg mb-2 bg-white cursor-pointer"
+      className="hover:shadow-lg   flex justify-between items-center border p-3 rounded-lg mb-2 bg-white cursor-pointer"
     >
       <div className="flex items-center gap-2">
         <FaBars className="text-gray-400" />

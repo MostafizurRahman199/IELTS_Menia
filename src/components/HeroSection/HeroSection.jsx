@@ -81,6 +81,7 @@ import React from "react";
 // Right side image
 import HeroImageMaac from "../../../public/heroImageMaac.png";
 import { IoIosPlay } from "react-icons/io";
+import StatsSection from "./StatsSection";
 
 const HeroSection = () => {
   return (
@@ -140,30 +141,7 @@ const HeroSection = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="absolute z-10 -bottom-16 sm:-bottom-24 lg:-bottom-20 left-1/2 transform -translate-x-1/2 w-11/12 sm:w-10/12 lg:w-10/12 mx-auto grid grid-cols-3 gap-4 sm:gap-6 bg-white text-blue-600 p-8 sm:py-12 px-4 sm:px-6 rounded-2xl shadow-md">
-        <div className="text-center space-y-2">
-          <h3 className="text-3xl sm:text-5xl font-semibold text-[#253642]">
-            60+
-          </h3>
-          <p className="text-sm sm:text-base text-[#516986]">
-            Packages Available
-          </p>
-        </div>
-        <div className="text-center space-y-2 sm:border-l sm:border-r border-gray-300">
-          <h3 className="text-3xl sm:text-5xl font-semibold text-[#253642]">
-            50+
-          </h3>
-          <p className="text-sm sm:text-base text-[#516986]">Students Joined</p>
-        </div>
-        <div className="text-center space-y-2">
-          <h3 className="text-3xl sm:text-5xl font-semibold text-[#253642]">
-            50+
-          </h3>
-          <p className="text-sm sm:text-base text-[#516986]">
-            Expert Facilitators
-          </p>
-        </div>
-      </div>
+      <StatsSection></StatsSection>
     </section>
   );
 };
